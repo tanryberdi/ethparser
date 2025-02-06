@@ -28,3 +28,6 @@ Temporary Items
 
 # IDE
 .idea
+
+# Executables
+ethparser
