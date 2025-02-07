@@ -21,7 +21,7 @@ A Go-based Ethereum blockchain parser that allows real-time monitoring of transa
 
 The project follows a clean architecture pattern with the following structure:
 ```
-   eth-parser/
+   ethparser/
     ├── README.md
     ├── go.mod
     ├── Makefile
