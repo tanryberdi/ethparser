@@ -1,5 +1,5 @@
 # Go parameters
-BINARY_NAME=eth-parser
+BINARY_NAME=ethparser
 MAIN_PACKAGE=./cmd/main.go
 
 # Go commands
