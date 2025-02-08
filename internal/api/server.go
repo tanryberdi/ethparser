@@ -61,7 +61,7 @@ func (s *Server) handleSubscribe(w http.ResponseWriter, r *http.Request) {
 	}
 
 	w.Header().Set("Content-Type", "application/json")
-	json.NewEncoder(w).Encode(resp)
+	_ = json.NewEncoder(w).Encode(resp)
 }
 
 func (s *Server) handleGetTransactions(w http.ResponseWriter, r *http.Request) {
@@ -88,7 +88,7 @@ func (s *Server) handleGetTransactions(w http.ResponseWriter, r *http.Request) {
 	}
 
 	w.Header().Set("Content-Type", "application/json")
-	json.NewEncoder(w).Encode(resp)
+	_ = json.NewEncoder(w).Encode(resp)
 }
 
 func (s *Server) handleGetCurrentBlock(w http.ResponseWriter, r *http.Request) {
@@ -100,7 +100,7 @@ func (s *Server) handleGetCurrentBlock(w http.ResponseWriter, r *http.Request) {
 	currentBlock := s.parser.GetCurrentBlock()
 
 	w.Header().Set("Content-Type", "application/json")
-	json.NewEncoder(w).Encode(map[string]int{"currentBlock": currentBlock})
+	_ = json.NewEncoder(w).Encode(map[string]int{"currentBlock": currentBlock})
 }
 
 func getSubscribeMessage(success bool) string {

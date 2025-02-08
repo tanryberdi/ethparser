@@ -58,7 +58,7 @@ func TestServer(t *testing.T) {
 		server.handleSubscribe(w, req)
 
 		var resp SubscribeResponse
-		json.Unmarshal(w.Body.Bytes(), &resp)
+		_ = json.Unmarshal(w.Body.Bytes(), &resp)
 		if !resp.Success {
 			t.Errorf("Expected successful subscription")
 		}
